@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(10, 117, 183);
+}
+
+.history-page {
+ background-color: #ffffff; 
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+.content {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+}
+
+
+.history-title {
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+ }
+ 
+ .history-avatar {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   margin-right: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .history-name {
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: #333;
+ }
+ 
+
+ .history-content {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 1200px;
+   gap: 20px;
+ }
+ 
+ .history-left,
+ .history-right {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-radius: 40px; 
+   border: 1px solid #000; 
+   padding: 30px;
+ }
+ 
+ /* Box styles */
+ .history-box {
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 10px;
+   text-align: left;
+   border-radius: 30px; 
+   border: 1px solid #000; 
+   padding: 30px;
+ }
+ 
+ .history-box h3 {
+   margin: 0 0 10px 0;
+   font-size: 1.2rem;
+   color: black;
+ }
+ 
+ .history-box p {
+   margin: 10px 0;
+   font-size: 0.95rem;
+   color: #555;
+ }
+ 
+ .history-link {
+   display: block;
+   margin: 0 auto;
+   font-size: 0.95rem;
+   color: black;
+   text-decoration: none;
+   text-align: center;
+ }
+ 
+ .history-link:hover {
+   text-decoration: underline;
+ }
+
+
+.history-box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px; 
+  padding: 10px;
+  background-color: rgb(234, 232, 232);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+ .history-box2 label {
+  display: flex;
+  align-items: center; 
+  font-size: 1rem;
+}
+
+.history-box2 input[type="date"] {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.buy-btn-complete {
+  background-color: rgb(10, 117, 183);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.buy-btn-complete:hover {
+  background-color: #218838;
+}
+ 
+ @media (max-width: 768px) {
+   .history-content {
+     flex-direction: column;
+     gap: 10px;
+   }
+ 
+   .history-left,
+   .history-right {
+     flex: none;
+     width: 100%;
+   }
+   .history-box {
+       text-align: center;
+     }
+   .history-box {
+     padding: 15px;
+   }
+ }
+ .style-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Độ dày của chữ */
+  font-size: 20px;  /* Kích thước chữ */
+  line-height: 28.13px; /* Khoảng cách dòng */
+  text-align: center; /* Canh giữa */
+}
+.style-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Độ dày của chữ */
+  font-size: 20px;  /* Kích thước chữ */
+  line-height: 28.13px; /* Khoảng cách dòng */
+  text-align: center; /* Canh giữa */
+}
+.input-group {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa label và input */
+}
+.list-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.list-container ul {
+  list-style: none;
+  padding: 25px;
+  width: 50%;
+  margin: 0;
+}
+.style-lable {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Độ dày của chữ */
+  font-size: 20px;  /* Kích thước chữ */
+  line-height: 23.44px; /* Khoảng cách dòng */
+  text-align: left; /* Canh giữa */
+}
+.style-input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Độ dày của chữ */
+  font-size: 20px;  /* Kích thước chữ */
+  line-height: 23.44px; /* Khoảng cách dòng */
+  text-align: left; /* Canh giữa */
+}
+
+.button-submit {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Độ dày của chữ */
+  font-size: 20px;  /* Kích thước chữ */
+  line-height: 23.44px; /* Khoảng cách dòng */
+  text-align: center; /* Canh giữa */
+  color: white;
+}
+
+.heading {
+  /* max-width: 50%;
+  height: 78px;
+  left: 182 px;*/
+  top: 132px; 
+  font-size: 57px;
+  font-weight: bold;
+  line-height: 40px; 
+  text-align: center; 
+  
+  color: black; 
+  font-family: 'Roboto', sans-serif; 
+}
+.item {
+max-width: 675px;
+border-radius: 30px;        /* Rounded corners */
+border: 1px solid #000;    /* Border with 1px width */
+padding: 25px 10px;
+text-align: left; 
+color: black; 
+gap: 10px;  
+}
+.Avt {
+  width: 100px;
+  margin-left: auto;
+}
+
+.search-bar {
+  margin: 10px 0 20px 0; /* Khoảng cách trên và dưới */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* CSS */
+.info-container {
+  display: flex;
+  justify-content: space-between; /* Đảm bảo các thẻ ul cách đều nhau */
+  width: 100%;
+}
+
+ul.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 3; /* Chia 3 phần cho info-list */
+  display: flex;
+  flex-direction: column;
+}
+
+ul.avatar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Chia 1 phần cho avatar-list */
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.info-list li {
+  margin-bottom: 10px;
+}
+
+ul.avatar-list .avatar-container {
+  margin-left: 20px;
+}
+
+ul.avatar-list .Avt {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

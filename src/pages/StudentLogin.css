@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(10, 117, 183);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(10, 117, 183);
+}
+
+
+.home-content {
+  flex: 1;
+  text-align: center;
+  padding: 0;
+}
+
+.content-top {
+  flex: 7;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: rgb(10, 117, 183);
+}
+
+.content-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  width: 60%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.guide-box h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.guide-box p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sign-up-button {
+  width: 100px;
+  height: 45px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  text-decoration: none;
+  border: none;
+  padding: 10px 10px;
+  /* Thêm padding dọc */
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 15px;
+  display: inline-block;
+  /* Đảm bảo button hiển thị đúng kích thước */
+}
+
+.sign-up-button:hover {
+  transition: all 0.3s ease;
+  background-color: #2f49a1;
+  color: white;
+  /* Thay đổi màu chữ khi hover */
+}
+
+
+.learn-more-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  margin: 10px auto;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.learn-more-button:hover {
+  opacity: 0.8;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.image {
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-bottom {
+  flex: 3;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.announcements {
+  background-color: white;
+}
+
+.announcements hr {
+  border: 0;
+  margin: 0 15%;
+  height: 2px;
+  width: 70%;
+  background: rgb(0, 10, 16);
+}
+
+.announcements-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.announcement-box {
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.532);
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.announcements h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.announcement-title {
+  color: blue;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .header-left {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .header-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .notification-box,
+  .dropdown-menu {
+    right: 10vw;
+    top: 13vh;
+    transform: translateX(-50%);
+  }
+
+
+  .content-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .guide-box {
+    width: 70%;
+    height: auto;
+  }
+
+  .content-left,
+  .content-right {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .content-right {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+
+  }
+
+  .image {
+    max-width: 150px;
+  }
+
+  .content-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .brand {
+    margin: 10px 0;
+  }
+}

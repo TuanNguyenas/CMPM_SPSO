@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(10, 117, 183);
+}
+
+  .print-page {
+    background-color: #f5f5f5; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .print-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .print-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .star {
+    color: red;
+    margin-right: 5px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h3 {
+    margin: 15px 0;
+  }
+  
+  .upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .print-form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+  
+
+  
+  select,
+  input[type="number"] {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  input[type="number"] {
+    width: 40px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  .summary {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn-complete {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-complete:hover {
+    background-color: #218838;
+  }
+  
+  .btn-back {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-back:hover {
+    background-color: #f8f9fa;
+  }
+  .print-form-group label {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: #000;
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    .print-card {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1rem;
+    }
+  
+    .upload-box {
+      font-size: 0.9rem;
+    }
+  
+    .print-form-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .print-form-group label {
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  
+    select,
+    input[type="number"] {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    .summary {
+      font-size: 0.9rem;
+    }
+  
+    .btn-complete,
+    .btn-back {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

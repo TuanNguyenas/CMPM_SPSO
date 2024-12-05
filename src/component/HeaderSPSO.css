@@ -1,0 +1,170 @@
+.header {
+  background-color: #4B90D0;
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 10px 20px;
+  border-radius: 0 0 30px 30px; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(165, 126, 126, 0.2); 
+}
+
+.header-right {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 15px; /* Khoảng cách giữa các phần tử */
+  position: relative;
+  background-color: #4B90D0;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.notification-box {
+  color: #333;
+  position: absolute;
+  width: 200px;
+  height: fit-content;
+  top: 45px;
+  right: 90px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.notification-box p{
+    padding:10px;
+    margin: 0px;
+}
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button-container button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #45a049;
+}
+
+.dropdown-arrow {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f0f0;
+}
+
+
+.header .logo, button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  text-align: center;
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo-container .logo-image {
+  width: 47px;
+  height: auto;
+}
+
+.header .logo-container .logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  text-align: center;
+  color: white;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li {
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #4B90D0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header nav ul li:hover {
+  background-color: #3b7bbf;
+  color: white;
+}
+
+.header .profile-icon {
+  font-size: 24px;
+  color: white;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4B90D0;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b7bbf;
+}
