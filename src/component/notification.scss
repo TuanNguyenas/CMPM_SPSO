@@ -26,39 +26,42 @@
 }
 
 /* Nội dung */
-.content {
+.noticontent {
     margin-left: 0vw;
-    /* Tránh Sidebar */
+    align-items: flex-start;
+    background-color: #fff;
     padding: 20px;
+    padding-top: 0px;
+    /* Thêm padding trên để tránh che khuất bởi header */
     width: calc(100% - 15vw);
     overflow-y: auto;
-    /* Cuộn nếu nội dung dài */
 }
+
 
 /* Container thông báo */
 .notification-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    /* Xếp dọc */
+    justify-content: flex-start;
+    align-items: stretch;
+    /* Căn các thẻ thông báo đầy chiều rộng */
     width: 100%;
+    gap: 10px;
+    /* Khoảng cách giữa các thẻ thông báo */
 }
 
 /* Thẻ thông báo */
 .notification-card {
     border: 1px solid #ddd;
-    /* Thêm viền nếu cần */
     padding: 16px;
-    /* Nội dung cách viền */
-    margin-right: 10px;
     margin-bottom: 16px;
-    /* Khoảng cách giữa các thông báo */
+    /* Khoảng cách giữa các thẻ thông báo */
     border-radius: 8px;
-    /* Bo góc thẻ thông báo */
     background-color: #f9f9f9;
-    /* Màu nền nhạt */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Hiệu ứng bóng */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 
 /* Tiêu đề thông báo */
@@ -112,7 +115,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
@@ -188,26 +191,22 @@
 
 .add-button {
     color: rgb(73, 71, 71);
-    /* Màu chữ */
     background-color: #4B90D0;
-    /* Màu xanh biển */
     border-radius: 10px;
-    /* Bo góc cho nút */
     padding: 10px 20px;
-    /* Khoảng cách bên trong nút */
-    margin: 0 0 20px 32px;
     font-size: 16px;
-    /* Cỡ chữ */
     font-weight: 400;
-    /* Độ dày chữ mặc định */
-    box-shadow: 0 5px 5px rgba(121, 120, 120, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    /* Hiệu ứng chuyển đổi mượt mà */
     border-width: 1px;
+    margin: 20px 0px;
+    /* Thêm margin-top để tránh bị đẩy lên quá gần header */
+    z-index: 10;
+    /* Đảm bảo nút không bị chồng lên các phần tử khác */
 }
 
 .add-button:hover {
     background-color: #4B90D0;
     color: black;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }

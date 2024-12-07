@@ -7,9 +7,9 @@ class Navigation extends React.Component {
 
         return (
             <div className="topnav" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                
+
                 {/* Button "Tổng Quan" */}
-                <a href="/" className={currentPath === '/' ? 'active' : ''}>
+                <a href="/admin-home" className={currentPath === '/admin-home' ? 'active' : ''}>
                     <button style={{ marginTop: '10px' }}>
                         Tổng Quan
                     </button>

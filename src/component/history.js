@@ -1,19 +1,19 @@
 import React from "react";
-import Header from "./Header"; 
-import Footer from "./Footer"; 
-import "./history.css"; 
+import Header from "./Header";
+import Footer from "./Footer";
+import "./history.css";
 
 function History() {
   return (
     <div className="history-page">
-      <Header /> 
-      <div className="content">
-        
+      <Header />
+      <div className="HistoryStudentcontent">
+
 
         <div className="history-content">
           <div className="history-left">
             <div >
-                <h1>Lịch sử thanh toán</h1>
+              <h1>Lịch sử thanh toán</h1>
             </div>
             <div className="history-box">
               <p><strong>Ngày thực hiện:</strong> Thứ Tư, 3 tháng 1 2024, 7:18 PM </p>
@@ -49,7 +49,7 @@ function History() {
 
           <div className="history-right">
             <div>
-                <h1>Báo cáo</h1>
+              <h1>Báo cáo</h1>
             </div>
 
             <div className="history-box">
@@ -58,20 +58,20 @@ function History() {
               <p><strong>Số trang đã thanh toán:</strong> 10 </p>
             </div>
             <div className="history-box2">
-                <label>
-                    <strong>Chọn ngày bắt đầu: </strong>
-                    <input type="date" defaultValue="2024-01-01" />
-                </label>
-                <label>
-                    <strong>Chọn ngày kết thúc: `</strong>
-                    <input type="date" defaultValue="2024-01-01" />
-                </label>
-                <button className="buy-btn-complete">Tìm lịch sử và tạo báo cáo</button>
+              <label>
+                <strong>Chọn ngày bắt đầu: </strong>
+                <input type="date" defaultValue="2024-01-01" />
+              </label>
+              <label>
+                <strong>Chọn ngày kết thúc: `</strong>
+                <input type="date" defaultValue="2024-01-01" />
+              </label>
+              <button className="buy-btn-complete">Tìm lịch sử và tạo báo cáo</button>
             </div>
           </div>
         </div>
       </div>
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

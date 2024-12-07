@@ -34,7 +34,11 @@ const HomePage = () => {
             <div className="layout">
                 <Navigation />
                 <div className="content">
-                    <div className="stats-container">
+                    <div className="stats-container"
+                        style={{
+                            marginTop: "5px"
+                        }}
+                    >
                         <div className="stat-card">
                             <div className="stat-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <h3>Tổng số máy in đang hoạt động</h3>
@@ -86,38 +90,46 @@ const HomePage = () => {
                             <span>8.5% Up from last month</span>
                         </div>
                     </div>
-                    <div className="content" style={{ padding: '0px', width: 'calc(100% - 4vw)' }}>
-                        <div className="table-container">
-                            <h3>Danh sách trạng thái máy in</h3>
-                            <table className="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>MÁY IN</th>
-                                        <th>SPSO</th>
-                                        <th>VỊ TRÍ</th>
-                                        <th>TRẠNG THÁI</th>
-                                        <th>BẢO TRÌ</th>
-                                        <th>CÀI ĐẶT</th>
+                    <div className="table-container"
+                        style={{
+                            width: 'calc(100% - 4vw)', /* Căn giữa các phần tử theo chiều dọc */
+                            marginLeft: '2vw', /* Căn hai đầu */
+                            padding: '10px' /* Thêm padding cho phần tử bên trong */
+                        }}
+                    >
+                        <h3
+                            style={{
+                                padding: '5px 0px'
+                            }}
+                        >Danh sách trạng thái máy in</h3>
+                        <table className="data-table">
+                            <thead>
+                                <tr>
+                                    <th>MÁY IN</th>
+                                    <th>SPSO</th>
+                                    <th>VỊ TRÍ</th>
+                                    <th>TRẠNG THÁI</th>
+                                    <th>BẢO TRÌ</th>
+                                    <th>CÀI ĐẶT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {tableData.map(row => (
+                                    <tr key={row.id}>
+                                        <td>{row.printer}</td>
+                                        <td>{row.spso}</td>
+                                        <td>{row.location}</td>
+                                        <td>{row.status}</td>
+                                        <td>{row.maintenance}</td>
+                                        <td>
+                                            <button onClick={() => togglePower(row.id)} className="power-bttn">
+                                                {row.power}
+                                            </button>
+                                        </td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {tableData.map(row => (
-                                        <tr key={row.id}>
-                                            <td>{row.printer}</td>
-                                            <td>{row.spso}</td>
-                                            <td>{row.location}</td>
-                                            <td>{row.status}</td>
-                                            <td>{row.maintenance}</td>
-                                            <td>
-                                                <button onClick={() => togglePower(row.id)} className="power-btn">
-                                                    {row.power}
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

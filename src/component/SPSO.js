@@ -26,7 +26,11 @@ const HomePage = () => {
             <div className="layout">
                 <Navigation />
                 <div className="content">
-                    <div className="stats-container">
+                    <div className="stats-container"
+                        style={{
+                            marginTop: "-40px"
+                        }}
+                    >
                         <div className="stat-card">
                             <div className="stat-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <h3>Tổng số máy in đang hoạt động</h3>
@@ -79,8 +83,18 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="table-container">
-                        <h3>Danh sách trạng thái máy in</h3>
+                    <div className="table-container"
+                        style={{
+                            width: 'calc(100% - 4vw)', /* Căn giữa các phần tử theo chiều dọc */
+                            marginLeft: '2vw', /* Căn hai đầu */
+                            padding: '10px' /* Thêm padding cho phần tử bên trong */
+                        }}
+                    >
+                        <h3
+                            style={{
+                                padding: '5px 0px'
+                            }}
+                        >Danh sách SPSO</h3>
                         <table className="data-table">
                             <thead>
                                 <tr>
@@ -103,7 +117,7 @@ const HomePage = () => {
                                         <td>{row.start}</td>
                                         <td>{row.end}</td>
                                         <td>
-                                            <button onClick={() => deleteRow(row.id)} className="delete-btn">XÓA</button>
+                                            <button onClick={() => deleteRow(row.id)} className="delete-bttn">XÓA</button>
                                         </td>
                                     </tr>
                                 ))}

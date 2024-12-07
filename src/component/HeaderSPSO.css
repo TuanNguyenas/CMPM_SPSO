@@ -1,22 +1,24 @@
 .header {
   background-color: #4B90D0;
-  width: 80%; 
-  margin: 0 auto; 
+  width: 80%;
+  margin: 0 auto;
   padding: 10px 20px;
-  border-radius: 0 0 30px 30px; 
+  border-radius: 0 0 30px 30px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(165, 126, 126, 0.2); 
+  box-shadow: 0 4px 8px rgba(165, 126, 126, 0.2);
 }
 
 .header-right {
   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  gap: 15px; /* Khoảng cách giữa các phần tử */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  gap: 0px;
+  /* Khoảng cách giữa các phần tử */
   position: relative;
-  background-color: #4B90D0;
+  background-color: #fff;
 }
 
 .icon {
@@ -39,9 +41,9 @@
   z-index: 10;
 }
 
-.notification-box p{
-    padding:10px;
-    margin: 0px;
+.notification-box p {
+  padding: 10px;
+  margin: 0px;
 }
 
 .avatar img {
@@ -81,7 +83,7 @@
   right: 0;
   background: #fff;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -98,7 +100,8 @@
 }
 
 
-.header .logo, button {
+.header .logo,
+button {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -157,7 +160,7 @@ button {
   border: none;
   border-radius: 5px;
   background-color: #4B90D0;
-  color: white;
+  color: rgb(58, 58, 58);
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;

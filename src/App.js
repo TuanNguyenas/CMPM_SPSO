@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.scss";
 import logo from "./images/hcmut.png";
-import Login from "./pages/Login.js"; 
+import Login from "./pages/Login.js";
 import StudentHome from "./pages/StudentHome";
 import AdminHome from "./pages/AdminHome";
 
@@ -17,6 +17,7 @@ import History from "./component/history";
 import SPSOHome from "./pages/SPSOHome";
 import HistoryOfSPSO from "./component/HistoryOfSPSO";
 import HistoryPrinter from "./component/HistoryPrinter";
+import ProfileSPSO from "./component/profileSPSO";
 import HistorySPSO from "./component/HistorySPSO";
 import ConfigSPSO from "./component/ConfigSPSO";
 
@@ -81,12 +82,12 @@ export default function AppWrapper() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App/>} /> {/* Trang chính */}
+        <Route path="/" element={<App />} /> {/* Trang chính */}
         <Route path="/login" element={<Login />} /> {/* Trang login */}
-        
+
         {/* Sinh viên */}
         <Route path="/student-home" element={<StudentLogin />} />
-        <Route path="/print" element={<Print />} /> 
+        <Route path="/print" element={<Print />} />
         <Route path="/buy" element={<Buy />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/history" element={<History />} />
@@ -94,12 +95,13 @@ export default function AppWrapper() {
 
         {/* SPSO */}
         <Route path="/spso-home" element={<SPSOHome />} />
-        <Route path="/historyStudent" element={<HistoryOfSPSO  />} />
-        <Route path="/historyPrinter" element={<HistoryPrinter  />} />
-        <Route path="/historySPSO" element={<HistorySPSO  />} />
-        <Route path="/configSPSO" element={<ConfigSPSO  />} />
+        <Route path="/historyStudent" element={<HistoryOfSPSO />} />
+        <Route path="/profileSPSO" element={<ProfileSPSO />} />
+        <Route path="/historyPrinter" element={<HistoryPrinter />} />
+        <Route path="/historySPSO" element={<HistorySPSO />} />
+        <Route path="/configSPSO" element={<ConfigSPSO />} />
 
-        {/* Admin */} 
+        {/* Admin */}
         <Route path="/admin-home" element={<AdminHome />} />
         <Route path="/printer" element={<Printer />} />
         <Route path="/SPSO" element={<SPSO />} />

@@ -1,6 +1,5 @@
 ﻿import React, { useState } from 'react';
 import './notification.scss';
-import { Menu, MenuItem, IconButton } from '@mui/material';
 
 import HeaderAdmin from '../component/headerAdmin'; // Import Header
 import Navigation from '../pages/nav/Navigation';
@@ -49,7 +48,7 @@ const Notification = () => {
             author: `Student Printing Service Officer - ${new Date().toLocaleString()}`,
             content: 'Nội dung thông báo mới.\nHãy nhập thông báo chi tiết hơn ở đây.',
         };
-        setNotifications((prev) => [...prev, newNotification]);
+        setNotifications((prev) => [newNotification, ...prev]); // Thêm vào đầu mảng
     };
 
     return (
@@ -63,7 +62,7 @@ const Notification = () => {
                 <Navigation />
 
                 {/* Nội dung thông báo */}
-                <div className="content">
+                <div className="noticontent">
                     <button className="add-button" onClick={addNotification}>
                         Thêm thông báo mới
                     </button>

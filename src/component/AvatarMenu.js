@@ -12,7 +12,7 @@ const AvatarMenu = () => {
     };
 
     const handleLogOut = () => {
-        navigate("/login");
+        navigate("/");
     };
 
     return (

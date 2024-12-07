@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
 import Header from "./Header";
 import Footer from "./Footer";
 import "./print.css";
@@ -7,9 +7,24 @@ import FileUpload from "./FileUpload";
 
 function Print() {
   const navigate = useNavigate();
+  const [showNotification, setShowNotification] = useState(false);
+  const location = useLocation(); // Lấy thông tin đường dẫn hiện tại
+
+  const handleComplete = () => {
+    setShowNotification(true); // Hiển thị thông báo
+    setTimeout(() => {
+      setShowNotification(false); // Ẩn thông báo sau 3 giây
+      navigate("/student-home"); // Điều hướng về trang chủ
+    }, 3000);
+  };
+
+  const closeNotification = () => {
+    setShowNotification(false);
+    navigate("/student-home");
+  };
 
   return (
-    <div className="print-page">
+    <div className={`print-page ${showNotification ? "blur" : ""}`}>
       <Header />
       <div className="print-content">
         <div className="print-card">
@@ -77,20 +92,30 @@ function Print() {
           </div>
           <hr />
           <div className="summary">
-            Tổng cộng số trang: ...
+            Tổng số trang: 32 trang
           </div>
           <div className="button-group">
-            <button className="btn-complete"
-              onClick={() => navigate("/student-home")}
+            <button className="bttn-complete"
+              onClick={handleComplete}
             >Hoàn tất</button>
             <button
-              className="btn-back"
+              className="bttn-back"
               onClick={() => navigate("/student-home")}
             >Quay lại</button>
           </div>
         </div>
       </div>
       <Footer />
+      {showNotification && (
+        <div className="notification-overlay">
+          <div className="notification-popup">
+            <span>Xác nhận yêu cầu in thành công</span>
+            <button className="close-btn" onClick={closeNotification}>
+              x
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

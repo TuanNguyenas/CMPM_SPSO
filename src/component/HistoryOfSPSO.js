@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import HeaderSPSO from "./HeaderSPSO"; 
-import Footer from "./Footer"; 
+import React, { useState } from "react";
+import HeaderSPSO from "./HeaderSPSO";
+import Footer from "./Footer";
 import logo from "../images/logo_BK1.png"
-import "./HistoryOfSPSO.css"; 
+import "./HistoryOfSPSO.css";
 
 function HistoryOfSPSO() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -75,15 +75,15 @@ function HistoryOfSPSO() {
   };
   return (
     <div className="history-page">
-      <HeaderSPSO /> 
-      <div className="content">
-        
+      <HeaderSPSO />
+      <div className="HistoryPrintContent">
+
 
         <div className="history-content">
           <div className="history-left">
-            <div className="heading">Lịch sử in</div>
+            <div className="heading" style={{ fontSize: '35px' }}>Lịch sử in</div>
             <div className="search-bar">
-            <input
+              <input
                 type="text"
                 placeholder="Tìm kiếm theo tên hoặc MSSV..."
                 value={searchQuery}
@@ -91,40 +91,40 @@ function HistoryOfSPSO() {
               />
             </div>
             {filteredData.map((item, index) => (
-                <div key={index} className="item">
-                  <div className="info-container">
-                    <ul className="info-list">
-                      <li>
-                        <span className="style-bold">Họ và tên: </span>
-                        <span className="style-regular">{item.name}</span>
-                      </li>
-                      <li>
-                        <span className="style-bold">MSSV: </span>
-                        <span className="style-regular">{item.studentId}</span>
-                      </li>
-                      <li>
-                        <span className="style-bold">Số trang còn lại: </span>
-                        <span className="style-regular">{item.remainingPages}</span>
-                      </li>
-                    </ul>
+              <div key={index} className="item">
+                <div className="info-container">
+                  <ul className="info-list">
+                    <li>
+                      <span className="style-bold">Họ và tên: </span>
+                      <span className="style-regular">{item.name}</span>
+                    </li>
+                    <li>
+                      <span className="style-bold">MSSV: </span>
+                      <span className="style-regular">{item.studentId}</span>
+                    </li>
+                    <li>
+                      <span className="style-bold">Số trang còn lại: </span>
+                      <span className="style-regular">{item.remainingPages}</span>
+                    </li>
+                  </ul>
 
-                    <ul className="avatar-list">
-                      <li className="avatar-container">
-                        <img src={logo} alt="Avatar" className="Avt" />
-                      </li>
-                    </ul>
-                  </div>
-
-                  <a href="/HistoryStudent" className="history-link">Xem thêm</a>
-
+                  <ul className="avatar-list">
+                    <li className="avatar-container">
+                      <img src={logo} alt="Avatar" className="Avt" />
+                    </li>
+                  </ul>
                 </div>
-              ))}
+
+                <a href="/HistoryStudent" className="history-link">Xem thêm</a>
+
+              </div>
+            ))}
 
           </div>
 
           <div className="history-right">
             <div>
-                <div className = "heading">Báo cáo</div>
+              <div className="heading" style={{ fontSize: '35px' }}>Báo cáo</div>
             </div>
 
             <div className="history-box">
@@ -171,31 +171,31 @@ function HistoryOfSPSO() {
               </div>
             </div>
             <div className="history-box2">
-            <div className = "input-group">
-          <span className="style-lable"><label>Chọn ngày bắt đầu:</label></span>
-          <span className="style-input"><input type="date" /></span> <br />
-        </div>
-        
-        <div className = "input-group">
-          <span className="style-lable"><label>Chọn ngày kết thúc:</label></span>
-          <span className="style-input"><input type="date" /></span> <br />
-        </div>
-        <div className = "input-group">
-          <span className="style-lable"><label>Chọn cơ sở:</label></span>
-          <span className="style-input">
-            <select>
-              <option value="ca-hai">Cả hai</option>
-              <option value="co-so-1">Cơ sở 1</option>
-              <option value="co-so-2">Cơ sở 2</option>
-            </select>
-          </span> <br />
-        </div>
-                <button className="buy-btn-complete">Tìm lịch sử và tạo báo cáo</button>
-      </div>
+              <div className="input-group">
+                <span className="style-lable"><label>Chọn ngày bắt đầu:</label></span>
+                <span className="style-input"><input type="date" /></span> <br />
+              </div>
+
+              <div className="input-group">
+                <span className="style-lable"><label>Chọn ngày kết thúc:</label></span>
+                <span className="style-input"><input type="date" /></span> <br />
+              </div>
+              <div className="input-group">
+                <span className="style-lable"><label>Chọn cơ sở:</label></span>
+                <span className="style-input">
+                  <select>
+                    <option value="ca-hai">Cả hai</option>
+                    <option value="co-so-1">Cơ sở 1</option>
+                    <option value="co-so-2">Cơ sở 2</option>
+                  </select>
+                </span> <br />
+              </div>
+              <button className="buy-btn-complete">Tìm lịch sử và tạo báo cáo</button>
+            </div>
           </div>
         </div>
       </div>
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

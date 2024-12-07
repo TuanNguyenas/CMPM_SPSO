@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import './AdminHome.scss';
 // import { Menu, MenuItem, IconButton } from '@mui/material';
-import HeaderAdmin from '../component/headerAdmin'; 
+import HeaderAdmin from '../component/headerAdmin';
 import Navigation from './nav/Navigation';
 import { useState } from 'react';
 import numberOfPrinter from '../images/numberOfPrinter.png'
@@ -26,16 +26,18 @@ const AdminHome = () => {
     return (
         <div className="homepage">
             {/* Header */}
-            <HeaderAdmin>
-            </HeaderAdmin>
-
+            <HeaderAdmin />
             {/* Layout chính */}
             <div className="layout">
                 {/* Sidebar */}
                 <Navigation />
 
                 {/* Nội dung chính */}
-                <div className="content">
+                <div className="content"
+                // style={{
+                //     marginTop: '70px'
+                // }}
+                >
                     {/* Dòng đầu tiên: Thẻ thống kê */}
                     <div className="stats-container">
                         <div className="stat-card">
@@ -44,7 +46,7 @@ const AdminHome = () => {
                                     display: 'flex',
                                     justifyContent: 'space-between', /* Căn hai đầu */
                                     alignItems: 'center' /* Căn giữa các phần tử theo chiều dọc */
-                                } }>
+                                }}>
                                 <h3>Tổng số máy in đang hoạt động</h3>
                                 <img height='50px' src={numberOfPrinter} alt="numberOfPrinter" className="stat-icon" />
                             </div>
@@ -63,7 +65,7 @@ const AdminHome = () => {
                                 <img height='50px' src={numberOfUser} alt="numberOfUser" className="stat-icon" />
                             </div>
                             <p>100</p>
-                                <span>8.5% Up from last month</span>
+                            <span>8.5% Up from last month</span>
                         </div>
 
                         <div className="stat-card">

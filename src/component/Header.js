@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../images/hcmut.png";
 import avatar from "../images/avatar.svg";
@@ -23,8 +23,8 @@ function Header() {
         <span className="header-title">HCMUT_SPSS</span>
       </div>
       <nav className="header-center">
-        <Link to="/student-home">Trang chủ</Link> 
-        <Link to="/print">In tài liệu</Link> 
+        <Link to="/student-home">Trang chủ</Link>
+        <Link to="/print">In tài liệu</Link>
         <Link to="/buy">Mua trang</Link>
       </nav>
       <div className="header-right">
@@ -37,15 +37,14 @@ function Header() {
           </div>
         )}
         <div className="avatar">
-            <img src={avatar} alt="Avatar" />
-        </div> 
+          <img src={avatar} alt="Avatar" />
+        </div>
         <div className="dropdown-arrow" onClick={toggleDropdown}>
           ▼
         </div>
         {isDropdownOpen && (
           <div className="dropdown-menu">
-            <Link to="/profile">Tài khoản</Link> 
-            {/* <Link to="/settings">Tùy chọn</Link>  */}
+            <Link to="/profile">Tài khoản</Link>
             <Link to="/">Đăng xuất</Link>
           </div>
         )}
