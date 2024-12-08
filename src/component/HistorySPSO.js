@@ -13,7 +13,7 @@ function HistoryPrinter() {
             <div className="body">
                 {/* Phần tử cho logo HistoryPrinter */}
                 <ul className="button-left">
-                    <Link to="/HistoryPrinter">
+                    <Link to="/HistorySPSOPrinter">
                         <img className="button-image" src={printerButton} alt="History" />
                     </Link>
                     <p className="image-caption">Lịch sử hoạt động</p>

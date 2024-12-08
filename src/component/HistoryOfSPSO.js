@@ -6,6 +6,16 @@ import "./HistoryOfSPSO.css";
 
 function HistoryOfSPSO() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const handleGenerateReport = () => {
+    if (startDate && endDate) {
+      setReportGenerated(true);
+    } else {
+      alert("Vui lòng chọn đầy đủ ngày bắt đầu và ngày kết thúc!");
+    }
+  };
+  const [reportGenerated, setReportGenerated] = useState(false);
   const historyData = [
     {
       name: "Nguyễn Văn A",
@@ -129,68 +139,94 @@ function HistoryOfSPSO() {
 
             <div className="history-box">
               <span className="style-bold">Ngày bắt đầu: </span>
-              <span className="style-regular">{data.startDate}</span> <br />
+              <span className="style-regular">{startDate || "Chưa chọn"}</span> <br />
               <span className="style-bold">Ngày kết thúc: </span>
-              <span className="style-regular">{data.endDate}</span> <br />
-              <span className="style-bold">Số file đã upload: </span>
-              <span className="style-regular">{data.uploadedFiles}</span> <br />
-              <span className="style-bold">Cơ sở: </span>
-              <span className="style-regular">{data.campus}</span> <br />
-              <span className="style-bold">Số lượng sinh viên đã in: </span>
-              <span className="style-regular">{data.studentsPrinted}</span> <br />
-              <span className="style-bold">Các loại giấy đã sử dụng:</span> <br />
-              <div className="list-container">
-                <ul>
-                  <li>
-                    <span className="style-bold">A0: </span>
-                    <span className="style-regular">{data.paperTypes.A0}</span>
-                  </li>
-                  <li>
-                    <span className="style-bold">A1: </span>
-                    <span className="style-regular">{data.paperTypes.A1}</span>
-                  </li>
-                  <li>
-                    <span className="style-bold">A2: </span>
-                    <span className="style-regular">{data.paperTypes.A2}</span>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <span className="style-bold">A3: </span>
-                    <span className="style-regular">{data.paperTypes.A3}</span>
-                  </li>
-                  <li>
-                    <span className="style-bold">A4: </span>
-                    <span className="style-regular">{data.paperTypes.A4}</span>
-                  </li>
-                  <li>
-                    <span className="style-bold">A5: </span>
-                    <span className="style-regular">{data.paperTypes.A5}</span>
-                  </li>
-                </ul>
-              </div>
+              <span className="style-regular">{endDate || "Chưa chọn"}</span> <br />
+              {reportGenerated ? (
+                <>
+                  <span className="style-bold">Số file đã upload: </span>
+                  <span className="style-regular">100</span> <br />
+                  <span className="style-bold">Mã máy in: </span>
+                  <span className="style-regular">HCMUT2-001</span> <br />
+                  <span className="style-bold">Số lượng sinh viên đã in: </span>
+                  <span className="style-regular">105</span> <br />
+                  <span className="style-bold">Các loại giấy đã sử dụng:</span> <br />
+                  <div className="list-container">
+                    <ul>
+                      <li>
+                        <span className="style-bold">A0: </span>
+                        <span className="style-regular">10</span>
+                      </li>
+                      <li>
+                        <span className="style-bold">A1: </span>
+                        <span className="style-regular">3</span>
+                      </li>
+                      <li>
+                        <span className="style-bold">A2: </span>
+                        <span className="style-regular">3</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <span className="style-bold">A3: </span>
+                        <span className="style-regular">3</span>
+                      </li>
+                      <li>
+                        <span className="style-bold">A4: </span>
+                        <span className="style-regular">20</span>
+                      </li>
+                      <li>
+                        <span className="style-bold">A5: </span>
+                        <span className="style-regular">1</span>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <span className="style-bold">Số file đã upload: </span>
+                  <span className="style-regular">--</span> <br />
+                  <span className="style-bold">Mã máy in: </span>
+                  <span className="style-regular">HCMUT2-001</span> <br />
+                  <span className="style-bold">Số lượng sinh viên đã in: </span>
+                  <span className="style-regular">--</span> <br />
+                  <span className="style-bold">Các loại giấy đã sử dụng:</span> <br />
+                  <div className="list-container">
+                    <ul>
+                      <li><span className="style-regular">--</span></li>
+                    </ul>
+                  </div>
+                </>
+              )}
             </div>
             <div className="history-box2">
               <div className="input-group">
                 <span className="style-lable"><label>Chọn ngày bắt đầu:</label></span>
-                <span className="style-input"><input type="date" /></span> <br />
+                <span className="style-input">
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                  />
+                </span> <br />
               </div>
 
               <div className="input-group">
                 <span className="style-lable"><label>Chọn ngày kết thúc:</label></span>
-                <span className="style-input"><input type="date" /></span> <br />
-              </div>
-              <div className="input-group">
-                <span className="style-lable"><label>Chọn cơ sở:</label></span>
                 <span className="style-input">
-                  <select>
-                    <option value="ca-hai">Cả hai</option>
-                    <option value="co-so-1">Cơ sở 1</option>
-                    <option value="co-so-2">Cơ sở 2</option>
-                  </select>
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                  />
                 </span> <br />
               </div>
-              <button className="buy-btn-complete">Tìm lịch sử và tạo báo cáo</button>
+              <div className="input-group">
+                <span className="style-lable"><label>Mã máy in:  HCMUT2-001</label></span>
+              </div>
+              <button className="buy-btn-complete" onClick={handleGenerateReport}>
+                Tìm lịch sử và tạo báo cáo
+              </button>
             </div>
           </div>
         </div>

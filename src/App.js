@@ -16,7 +16,7 @@ import History from "./component/history";
 //Import SPSO Student
 import SPSOHome from "./pages/SPSOHome";
 import HistoryOfSPSO from "./component/HistoryOfSPSO";
-import HistoryPrinter from "./component/HistoryPrinter";
+import HistorySPSOPrinter from "./component/HistorySPSOPrinter";
 import ProfileSPSO from "./component/profileSPSO";
 import HistorySPSO from "./component/HistorySPSO";
 import ConfigSPSO from "./component/ConfigSPSO";
@@ -97,7 +97,7 @@ export default function AppWrapper() {
         <Route path="/spso-home" element={<SPSOHome />} />
         <Route path="/historyStudent" element={<HistoryOfSPSO />} />
         <Route path="/profileSPSO" element={<ProfileSPSO />} />
-        <Route path="/historyPrinter" element={<HistoryPrinter />} />
+        <Route path="/historySPSOPrinter" element={<HistorySPSOPrinter />} />
         <Route path="/historySPSO" element={<HistorySPSO />} />
         <Route path="/configSPSO" element={<ConfigSPSO />} />
 

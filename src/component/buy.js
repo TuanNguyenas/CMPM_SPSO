@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useLocation
 import Header from "./Header";
 import Footer from "./Footer";
 import "./buy.css";
@@ -8,12 +8,11 @@ import bkpay from "../images/bkpay.png";
 function Buy() {
   const navigate = useNavigate();
   const [numPages, setNumPages] = useState(1); // State để lưu số trang
-  const pricePerPage = 5000; // Đơn giá mỗi trang
+  const pricePerPage = 500; // Đơn giá mỗi trang
 
   // Hàm tính tổng số tiền
   const calculateTotal = () => numPages * pricePerPage;
   const [showNotification, setShowNotification] = useState(false);
-  const location = useLocation(); // Lấy thông tin đường dẫn hiện tại
 
   const handleComplete = () => {
     setShowNotification(true); // Hiển thị thông báo
