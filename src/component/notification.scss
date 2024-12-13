@@ -1,0 +1,212 @@
+﻿/* Toàn bộ trang */
+.notification-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Layout chính */
+.layout {
+    display: flex;
+    margin-top: 70px;
+    /* Đẩy nội dung xuống dưới Header */
+    height: calc(100vh - 70px);
+    /* Trừ chiều cao của Header */
+}
+
+/* Sidebar */
+.navigation {
+    width: 15vw;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    background-color: #f9f9f9;
+}
+
+/* Nội dung */
+.noticontent {
+    margin-left: 0vw;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 0px;
+    /* Thêm padding trên để tránh che khuất bởi header */
+    width: calc(100% - 15vw);
+    overflow-y: auto;
+}
+
+
+/* Container thông báo */
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    /* Xếp dọc */
+    justify-content: flex-start;
+    align-items: stretch;
+    /* Căn các thẻ thông báo đầy chiều rộng */
+    width: 100%;
+    gap: 10px;
+    /* Khoảng cách giữa các thẻ thông báo */
+}
+
+/* Thẻ thông báo */
+.notification-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    /* Khoảng cách giữa các thẻ thông báo */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Tiêu đề thông báo */
+.notification-card h2 {
+    font-size: 20px;
+    color: #2b6cb0;
+    /* Màu xanh */
+    margin-bottom: 10px;
+}
+
+/* Tác giả */
+.notification-card .author {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Nội dung thông báo */
+.notification-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Đường kẻ ngang */
+.notification-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Header của thông báo */
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    /* Đẩy tiêu đề và nút edit sang hai bên */
+    align-items: center;
+    position: relative;
+}
+
+/* Nút chỉnh sửa */
+.edit-button {
+    background-color: #e3f2fd;
+    /* Màu nền nhẹ */
+    border: none;
+    border-radius: 50%;
+    /* Hình tròn */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.edit-button img {
+    width: 20px;
+    /* Kích thước icon */
+    height: 20px;
+    object-fit: contain;
+}
+
+.edit-button:hover {
+    background-color: #d1eaff;
+    /* Màu nền khi hover */
+}
+
+
+.edit-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.large-edit-mode {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.large-edit-input {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 100%;
+}
+
+.large-edit-textarea {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+    /* Tăng chiều cao của textarea */
+    resize: none;
+}
+
+.edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.add-button {
+    color: rgb(73, 71, 71);
+    background-color: #4B90D0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-width: 1px;
+    margin: 20px 0px;
+    /* Thêm margin-top để tránh bị đẩy lên quá gần header */
+    z-index: 10;
+    /* Đảm bảo nút không bị chồng lên các phần tử khác */
+}
+
+.add-button:hover {
+    background-color: #4B90D0;
+    color: black;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,49 @@
+.avatar-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.avatar-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    /* Vị trí menu nằm dưới avatar */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px 0px 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    /* Kích thước menu */
+    z-index: 10;
+    /* Đảm bảo menu hiển thị trên các phần tử khác */
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 8px 8px;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    /* Màu nền khi hover */
+}

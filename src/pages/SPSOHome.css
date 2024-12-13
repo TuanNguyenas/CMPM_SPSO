@@ -1,0 +1,362 @@
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4B90D0;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #4B90D0;
+  }
+
+  
+.home-content {
+  flex: 1; 
+  text-align: center;
+  padding: 0;
+}
+
+.content-top {
+  flex: 7;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: #4B90D0;
+}
+
+.content-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 20px ;
+  width: 60%; 
+  height: auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.guide-box h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.guide-box p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sign-up-button {
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.learn-more-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  margin: 10px auto;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.sign-up-button ,.learn-more-button:hover {
+  opacity: 0.8;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.image {
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-bottom {
+  flex: 3;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.brand-logo {
+  width: auto;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.announcements {
+  background-color: white;
+}
+  
+.announcements hr {
+    border: 0;
+    margin: 0 15%;
+    height: 2px;
+    width: 70%;
+    background: rgb(0, 10, 16);
+}
+  
+.announcements-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+  
+.announcement-box {
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.532);
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.announcements h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.announcement-title {
+  color: blue;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%; 
+    flex-direction: column;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .header-left {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .header-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .notification-box,
+  .dropdown-menu {
+    right: 10vw;
+    top: 13vh;
+    transform: translateX(-50%);
+  }
+  
+  
+  .content-top {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .guide-box {
+    width: 70%; 
+    height: auto; 
+  }
+
+  .content-left, .content-right {
+    width: 90%; 
+    height: auto; 
+    margin: 10px 0;
+  }
+
+  .content-right {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px; 
+    
+  }
+
+  .image {
+    max-width: 150px;
+  }
+
+  .content-bottom {
+    flex-direction: column; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .brand {
+    margin: 10px 0; 
+  }
+}
+
+/* Thanh thông báo */
+.notification-bar {
+  position: fixed; /* Cố định vị trí */
+  top: 20px; /* Cách phía trên 20px */
+  right: 20px; /* Cách phía phải 20px */
+  background-color: #007bff; /* Màu nền xanh lam */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 8px; /* Bo góc */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  display: flex; /* Dùng Flexbox để căn chỉnh */
+  justify-content: space-between; /* Căn hai phần tử sang hai bên */
+  align-items: center; /* Căn giữa theo trục dọc */
+  min-width: 250px; /* Chiều rộng tối thiểu */
+  opacity: 1; /* Hiển thị thanh thông báo */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng */
+}
+
+
+
+
+.announcement-placeholder {
+  padding: 20px;
+  width: 80%;
+  background-color: white;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  text-align: center;
+  color: #999;
+  align-items: center;
+  font-size: 1em;
+}
+.create-announcement {
+  display: flex;
+  justify-content: center; /* Căn giữa nút theo chiều ngang */
+  margin-top: 15px;
+}
+
+.create-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: white;
+  color: #999;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px; 
+   border: 1px solid #000; 
+   width: 60%;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-field {
+  margin-bottom: 15px;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.input-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: rgb(10, 117, 183);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:hover {
+  background-color: #0056b3;
+}

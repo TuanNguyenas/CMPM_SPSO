@@ -1,0 +1,62 @@
+﻿.headerr {
+    position: fixed;
+    /* Cố định thanh header ở trên cùng */
+    top: 0;
+    /* Căn từ phía trên */
+    left: 0;
+    /* Căn từ phía bên trái */
+    width: 100%;
+    /* Để thanh header chiếm toàn bộ chiều rộng */
+    height: 70px;
+    /* Chiều cao của thanh header */
+    background-color: #4B90D0;
+    /* Giữ màu nền như cũ */
+    display: flex;
+    justify-content: space-between;
+    /* Căn hai đầu */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    z-index: 1000;
+    /* Đảm bảo header luôn nằm trên các phần tử khác */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Thêm đổ bóng nhẹ để header nổi bật */
+}
+
+
+
+.logo {
+    display: flex;
+    /* Căn ngang logo và chữ */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.logo span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    /* Khoảng cách giữa logo và chữ */
+    font-family: 'Akshar', sans-serif;
+    /* Sử dụng font Akshar */
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+
+
+.menu button:hover {
+    background-color: #ddd;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add a color to the active/current link */

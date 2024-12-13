@@ -1,0 +1,166 @@
+.container {
+  margin-top: 40px;
+  width: 40%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Làm mờ nội dung chính khi thông báo xuất hiện */
+.history-page.blur>.history-content,
+.history-page.blur>.subbody,
+.history-page.blur>Header,
+.history-page.blur>Footer {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* Lớp phủ cho thông báo popup */
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(96, 96, 96, 0.5);
+  /* Màu nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup thông báo */
+.notification-popup {
+  background-color: #fff;
+  color: #000;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 2000;
+}
+
+/* Nút đóng popup */
+.close-btn {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  background: none;
+  color: red;
+}
+
+.subbody {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: white;
+
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.form-group label {
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.form-group select {
+  flex: 0;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.form-group input {
+  flex: 0;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.file-types {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+}
+
+.file-types h3 {
+  margin: 0 0 10px 0;
+}
+
+.file-types ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-types ul li {
+  margin: 5px 0;
+}
+
+.subbody .container .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.subbody .container .content .button-right,
+.button-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  align-items: center;
+}
